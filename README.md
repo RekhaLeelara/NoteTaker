@@ -25,7 +25,7 @@ click on save button
 Verify the notes are added
 
 Delete Notes:
-Click on the red bin to delete notes
+Click on the red bin to delete notes to delete notes
 
 ## Support
 
