@@ -12,7 +12,7 @@ app.use(express.static('public'));
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 
-//Fetching default page
+//GET method to fetch default page
 app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/index.html'))
 );
@@ -28,6 +28,7 @@ app.get('/api/notes', (req, res) => {
     res.json(jsonfile);
 });
 
+//DELETE request to delete the data
 app.delete('/api/notes/:id', (req, res) => {
     jsonfile = jsonfile.filter(note => req.params.id!=note.id)
     
@@ -56,45 +57,26 @@ app.post('/api/notes', (req, res) => {
             if (err) {
                 console.log(err);
             } else {
-                data = JSON.parse(data); //now it an object
-                data.push(newReview); //add some data
-                // json = JSON.stringify(data); //convert it back to json
-                fs.writeFile('./db/db.json', JSON.stringify(data), 'utf8', () => {
-                    return res.json(data);
+                jsonfile.push(newReview);
+                fs.writeFile('./db/db.json', JSON.stringify(jsonfile), 'utf8', () => {
+                    return res.json(jsonfile);
                 }); // write it back 
             }
         });
-        // const response = {
-        //     status: 'success',
-        //     body: newReview,
-        // };
+        const response = {
+            status: 'success',
+            body: newReview,
+        };
 
-        // console.log(response);
+        console.log(response);
         // res.json(response);
     } else {
         res.json('Error in posting review');
     }
 
 });
-//   noteList = document.querySelectorAll('.list-container .list-group');
 
 //listen to the given port
 app.listen(PORT, () =>
     console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
-
-    // router.delete("/notes/:id", function(req, res){
-    //     notes.removeNote(req.params.id)
-
-    //     .then(notes => notes.filter(note => note.id !== parseInt(id)))
-    //     .then(updatedNotes => this.write(updatedNotes))
-
-    //     .then(() => res.json({ok: true}))
-    //     .catch(err => res.status(500).json(err));
-    // })
-    // removeNote(id) {
-    //     console.log("remove notes");
-    //     return this.getNotes()
-    //         .then(notes => notes.filter(note => note.id !== parseInt(id)))
-    //         .then(updatedNotes => this.write(updatedNotes))
-    // }

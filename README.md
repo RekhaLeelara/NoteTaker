@@ -1,13 +1,13 @@
 # # Description
 
-Project Description: This functionality helps the team to generate an webpage (html) with the following team details using node js
+This application allows the user to perform the following
 
-Manager - Name, role, Email id, office number
-Intern- Name, role, Email id, School
-Engineer- Name, role, Email id, Github
+a) View added notes
+b) Create New notes
+c) Delete existing notes
 
 ## Screenshot
-![testing](./Develop/assets/images/Application.png)
+![testing](./Develop/assets/images/NoteTaker.png)
 
 
 ## GitHub Repo
@@ -17,11 +17,15 @@ Repo: https://github.com/RekhaLeelara/MyTeamProfile
 
 ## Usage
 
-Go to the terminal > enter node index.js
-Enter the answer for the manager questions
-Choose Engineer/Intern and answer questions
-The user can add as many Engineer/Intern as he/she wants
-Open index.html page to view the details in the webpage
+Add Notes:
+Go to 
+Click on + button
+Add note title and note text in the text fields
+click on save button
+Verify the notes are added
+
+Delete Notes:
+Click on the red bin to delete notes
 
 ## Support
 
@@ -29,7 +33,7 @@ N/A
 
 ## Roadmap
 
-Addition roles and UI can be modified based on the user needs
+N/A
 
 ## License
 
