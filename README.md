@@ -7,7 +7,7 @@ b) Create New notes
 c) Delete existing notes
 
 ## Screenshot
-![testing](./Public/assets/images/NoteTaker.png)
+![testing](./public/assets/images/NoteTaker.png)
 
 
 ## GitHub Repo
