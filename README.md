@@ -7,12 +7,16 @@ b) Create New notes
 c) Delete existing notes
 
 ## Screenshot
-![testing](./Develop/assets/images/NoteTaker.png)
+![testing](./Public/assets/images/NoteTaker.png)
 
 
 ## GitHub Repo
 
 Repo: https://github.com/RekhaLeelara/MyTeamProfile
+
+## Deployed Application Link
+
+https://rekha-notetaker.herokuapp.com/
 
 
 ## Usage
